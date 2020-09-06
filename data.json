@@ -1,0 +1,204 @@
+{
+    "beach": [
+        {
+            "name_beach": "Playa de Samarines",
+            "coordenada": "Point(-16.368055555 28.343055555)"
+        },
+        {
+            "name_beach": "Playa de San Juan",
+            "coordenada": "Point(-13.5751 29.1255)"
+        },
+        {
+            "name_beach": "Playa de San Mateo",
+            "coordenada": "Point(-16.316666666 28.566666666)"
+        },
+        {
+            "name_beach": "Playa de la Mujer",
+            "coordenada": "Point(-14.046111111 28.574166666)"
+        },
+        {
+            "name_beach": "Playa de las Pilas",
+            "coordenada": "Point(-14.447777777 28.072777777)"
+        },
+        {
+            "name_beach": "Playa del Pozo",
+            "coordenada": "Point(-13.841666666 28.723055555)"
+        },
+        {
+            "name_beach": "Playa Puerto Rico",
+            "coordenada": "Point(-14.170277777 28.175555555)"
+        },
+        {
+            "name_beach": "Playa del Terrero",
+            "coordenada": "Point(-16.6125 28.394444444)"
+        },
+        {
+            "name_beach": "Playa del Topuerque",
+            "coordenada": "Point(-16.408333333 28.232222222)"
+        },
+        {
+            "name_beach": "Costa de Triana",
+            "coordenada": "Point(-17.966666666 28.783333333)"
+        },
+        {
+            "name_beach": "Playa de Ug\u00e1n",
+            "coordenada": "Point(-14.2088 28.272299999)"
+        },
+        {
+            "name_beach": "Playa de Santa Ana",
+            "coordenada": "Point(-16.3 28.416666666)"
+        },
+        {
+            "name_beach": "El Veril de Santiago",
+            "coordenada": "Point(-13.827222222 28.603611111)"
+        },
+        {
+            "name_beach": "Playa de Sotavento de Jand\u00eda",
+            "coordenada": "Point(-14.271388888 28.100555555)"
+        },
+        {
+            "name_beach": "Playa del Tamadite",
+            "coordenada": "Point(-16.254444444 28.570833333)"
+        },
+        {
+            "name_beach": "Costa del Rubic\u00f3n",
+            "coordenada": "Point(-13.874166666 28.867222222)"
+        },
+        {
+            "name_beach": "Playa de Regla",
+            "coordenada": "Point(-16.25 28.45)"
+        },
+        {
+            "name_beach": "Playa de Marfol\u00edn",
+            "coordenada": "Point(-14.0 28.683333333)"
+        },
+        {
+            "name_beach": "Costa de Miranda",
+            "coordenada": "Point(-17.756388888 28.702222222)"
+        },
+        {
+            "name_beach": "Los Agujeros",
+            "coordenada": "Point(-13.461388888 29.06)"
+        },
+        {
+            "name_beach": "Playa Los Picachos",
+            "coordenada": "Point(-13.825833333 28.616944444)"
+        },
+        {
+            "name_beach": "Playa de la Madera",
+            "coordenada": "Point(-18.116666666 27.758611111)"
+        },
+        {
+            "name_beach": "Playa de la Madera",
+            "coordenada": "Point(-13.7746 29.062099999)"
+        },
+        {
+            "name_beach": "Playas de Manchas Blancas",
+            "coordenada": "Point(-17.972222222 27.663888888)"
+        },
+        {
+            "name_beach": "Las Playas",
+            "coordenada": "Point(-17.954722222 27.722777777)"
+        },
+        {
+            "name_beach": "Las Playecillas",
+            "coordenada": "Point(-17.921944444 27.746388888)"
+        },
+        {
+            "name_beach": "Playa de Chimisay",
+            "coordenada": "Point(-16.36222222 28.33111111)"
+        },
+        {
+            "name_beach": "Playa de la Viuda",
+            "coordenada": "Point(-16.366944444 28.34)"
+        },
+        {
+            "name_beach": "Playa de los Valdivias",
+            "coordenada": "Point(-13.83 28.572222222)"
+        },
+        {
+            "name_beach": "Playa de Tebeto",
+            "coordenada": "Point(-14.035277777 28.588611111)"
+        },
+        {
+            "name_beach": "Playa Tejada",
+            "coordenada": "Point(-18.077222222 27.697222222)"
+        },
+        {
+            "name_beach": "Playa de Ijuana",
+            "coordenada": "Point(-16.127777777 28.544444444)"
+        },
+        {
+            "name_beach": "Playa de los James",
+            "coordenada": "Point(-13.930833333 28.239722222)"
+        },
+        {
+            "name_beach": "Playa de J\u00f3ver",
+            "coordenada": "Point(-16.366666666 28.55)"
+        },
+        {
+            "name_beach": "La Arenita",
+            "coordenada": "Point(-16.683333333 28.0)"
+        },
+        {
+            "name_beach": "Playa La Cabezuela",
+            "coordenada": "Point(-13.826944444 28.621666666)"
+        },
+        {
+            "name_beach": "Playas Largas",
+            "coordenada": "Point(-17.883333333 27.806666666)"
+        },
+        {
+            "name_beach": "Costa de Franceses",
+            "coordenada": "Point(-17.856944444 28.831388888)"
+        },
+        {
+            "name_beach": "Playa de Cofete",
+            "coordenada": "Point(-14.390277777 28.111666666)"
+        },
+        {
+            "name_beach": "Playa del Confital",
+            "coordenada": "Point(-16.55 28.016666666)"
+        },
+        {
+            "name_beach": "Playa Cueva de Agua",
+            "coordenada": "Point(-16.174444444 28.514166666)"
+        },
+        {
+            "name_beach": "Playa Dulce de Icota",
+            "coordenada": "Point(-17.967777777 27.684166666)"
+        },
+        {
+            "name_beach": "Playa de El Cabrito",
+            "coordenada": "Point(-17.143333333 28.063333333)"
+        },
+        {
+            "name_beach": "Playa de Argayal",
+            "coordenada": "Point(-17.316666666 28.083333333)"
+        },
+        {
+            "name_beach": "Playa de Barlovento de Jand\u00eda",
+            "coordenada": "Point(-14.336388888 28.133055555)"
+        },
+        {
+            "name_beach": "Playa Berruguete",
+            "coordenada": "Point(-16.310833333 28.408055555)"
+        },
+        {
+            "name_beach": "Playa Blanca",
+            "coordenada": "Point(-13.829444444 28.8625)"
+        },
+        {
+            "name_beach": "Playa de la Bodega",
+            "coordenada": "Point(-16.2 28.566666666)"
+        },
+        {
+            "name_beach": "Playa de las Caletas",
+            "coordenada": "Point(-16.361111111 28.378333333)"
+        },
+        {
+            "name_beach": "Playa del Camari\u00f1o",
+            "coordenada": "Point(-17.991944444 28.741388888)"
+        }
+    ]
+}
