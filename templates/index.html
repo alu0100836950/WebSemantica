@@ -50,23 +50,45 @@
 
  
         {% if ok %}
-        
-        <table align="center">
-            <tr>
-                <th> Name beach </th>
-                <th> Google maps </th>
-            </tr>
+            {% if select == 'beach'%}
             
+            <table align="center">
+                <tr>
+                    <th> Name beach </th>
+                    <th> Google maps </th>
+                </tr>
+                
 
-            {% for playa in search.beach %}
-             
-            <tr>
+                {% for playa in search.beach %}
+                
+                <tr>
 
-                <td>{{playa.name_beach}}</td>
-                <td><a href="https://maps.google.com/?q={{ playa.coordenada }}&ll={{ playa.coordenada }}&z=19&t=k">link</a></td-->
-            </tr>
-            {% endfor %}
-        </table>
+                    <td>{{playa.name_beach}}</td>
+                    <td><a href="https://maps.google.com/?q={{ playa.coordenada }}&ll={{ playa.coordenada }}&z=19&t=k">link</a></td-->
+                </tr>
+                {% endfor %}
+            </table>
+
+            {% endif%}
+            
+            {% if select == 'mountains'%}
+            
+            <table align="center">
+                <tr>
+                    <th> Name mountain </th>
+                    <th> Google maps </th>
+                </tr>
+                
+                {% for mountain in search.mountains %}
+                
+                <tr>
+
+                    <td>{{mountain.name_mountain}}</td>
+                    <td><a href="https://maps.google.com/?q={{ mountain.coordenada }}&ll={{ mountain.coordenada }}&z=19&t=k">link</a></td-->
+                </tr>
+                {% endfor %}
+            </table>
+            {% endif%}
         {% endif %}
     
         

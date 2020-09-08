@@ -19,7 +19,9 @@ def get_results(endpoint_url, query):
     return sparql.query().convert() 
 
 
-
+#
+### Método para devolver un JSON con los datos que queremos de las playas
+#
 def data_json_beach(results):
 
     Beach_JSON = {}
@@ -35,6 +37,9 @@ def data_json_beach(results):
 
     return Beach_JSON
 
+#
+### Método para devolver un JSON con los datos que queremos de las playas
+#
 def data_json_mountains(results):
 
     Mountains_JSON = {}
@@ -50,11 +55,18 @@ def data_json_mountains(results):
 
     return Mountains_JSON
 
+
+#
+### Este método recoge la opcion escogida en la web y crea la consulta y devuelte
+### los datos parseados a JSON
+#
 def query_list(selected):
 
     print('usted ha elegido ' + selected)
     
+    ## Consulta de las playas dee canarias
     if selected == 'beach':
+
 
         query = """SELECT ?playa ?playaLabel ?coordenadas WHERE {
         ?playa wdt:P31 wd:Q40080.
@@ -64,9 +76,9 @@ def query_list(selected):
         }"""
 
         results = get_results(endpoint_url, query)
-        results_parse = data_json_beach(results)
+        results_parse = data_json_beach(results) # llamamos a la funcion json
 
-
+        ## Modificamos el campo coordenada para obtener los puntos en orden y limpios
         for item in results_parse['beach']:
             pointStr = item['coordenada'].replace('Point(', '').replace(')', '')
             x = pointStr.split(' ')
@@ -74,7 +86,8 @@ def query_list(selected):
         
 
         return results_parse
-
+        
+    ## Consulta para las montañasn de canarias
     if selected == 'mountains':
 
         query = """SELECT ?monta_a ?monta_aLabel ?coordenadas WHERE {
@@ -97,7 +110,9 @@ def query_list(selected):
         return results_parse
 
 
-
+#
+### Modificamos los puntos de las coordenadas en el orden correcto
+#
 def createPoint(points):
     return f'{points[1]},{points[0]}'
     
@@ -113,13 +128,13 @@ def index():
         search = query_list(str(select))
 
         ok='ok'
+
         if select == 'beach' or 'mountains':
-            return render_template('index.html', search =search, ok=ok)
+            return render_template('index.html', search =search, select=select, ok=ok)
         return render_template('index.html', validate=validate)    
     
     return render_template('index.html')
 
 
 if __name__ == '__main__':
-    #app.run('127.0.0.1', 5000, debug=False)
-    app.run(debug=True)
+    app.run('127.0.0.1', 4000, debug=False)
