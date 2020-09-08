@@ -4,15 +4,16 @@
 import sys
 import json
 from SPARQLWrapper import SPARQLWrapper, JSON
+import re
 
 endpoint_url = "https://query.wikidata.org/sparql"
 
-query = """SELECT ?playa ?playaLabel ?coordenadas WHERE {
-  ?playa wdt:P31 wd:Q40080.
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "es". }
-  ?playa wdt:P131 wd:Q5813.
-  OPTIONAL { ?playa wdt:P625 ?coordenadas. }
-}"""
+query = """SELECT ?monta_a ?monta_aLabel ?coordenadas WHERE {
+        SERVICE wikibase:label { bd:serviceParam wikibase:language "es". }
+        ?monta_a wdt:P31 wd:Q8502;
+            wdt:P131 wd:Q5813.
+        OPTIONAL { ?monta_a wdt:P625 ?coordenadas. }
+        }"""
 
 
 def get_results(endpoint_url, query):
@@ -26,21 +27,29 @@ def get_results(endpoint_url, query):
 
 results = get_results(endpoint_url, query)
 
-#for result in results["results"]["bindings"]:
-#    print(result['playaLabel']['value'])
+#print(results["results"]["bindings"])
 
-
-Beach_JSON = {}
-Beach_JSON['beach'] = []
+patron = "Q.*"
 
 for result in results["results"]["bindings"]:
-    Beach_JSON['beach'].append({
-        'name_beach': result['playaLabel']['value'],
-        'coordenada': result['coordenadas']['value']
-    })
 
-print("*******************************************************")
-print(Beach_JSON)
+    if not (re.search(patron,str(result['monta_aLabel']['value']) )):
+        print(result['coordenadas']['value'])
 
-with open('data.json', 'w') as file:
-    json.dump(Beach_JSON, file, indent=4)
+
+Mountains_JSON = {}
+Mountains_JSON['mountains'] = []
+
+
+# for result in results["results"]["bindings"]:
+#     Mountains_JSON['mountains'].append({
+#         'name_mountain': result['monta_aLabel']['value'],
+#         'coordenada': result['coordenadas']['value']
+#     })
+
+
+# print("*******************************************************")
+# print(Mountains_JSON)
+
+with open('data_mountains.json', 'w') as file:
+    json.dump(Mountains_JSON, file, indent=4)

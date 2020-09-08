@@ -2,7 +2,7 @@ from flask import Flask
 from flask import render_template, request, redirect, url_for
 from SPARQLWrapper import SPARQLWrapper, JSON
 import sys, json
-
+import re
 
 app = Flask(__name__)
 
@@ -42,15 +42,19 @@ def data_json_beach(results):
 #
 def data_json_mountains(results):
 
+
     Mountains_JSON = {}
     Mountains_JSON['mountains'] = []
 
+    patron = "Q.*"
 
     for result in results["results"]["bindings"]:
-        Mountains_JSON['beach'].append({
-            'name_mountain': result['monta_aLabel']['value'],
-            'coordenada': result['coordenadas']['value']
-        })
+        if not (re.search(patron,str(result['monta_aLabel']['value']) )):
+        
+            Mountains_JSON['mountains'].append({
+                'name_mountain': result['monta_aLabel']['value'],
+                'coordenada': result['coordenadas']['value']
+            })
 
 
     return Mountains_JSON
@@ -86,21 +90,21 @@ def query_list(selected):
         
 
         return results_parse
-        
+
     ## Consulta para las montañasn de canarias
     if selected == 'mountains':
 
         query = """SELECT ?monta_a ?monta_aLabel ?coordenadas WHERE {
-        SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+       SERVICE wikibase:label { bd:serviceParam wikibase:language "es". }
         ?monta_a wdt:P31 wd:Q8502;
             wdt:P131 wd:Q5813.
         OPTIONAL { ?monta_a wdt:P625 ?coordenadas. }
         }"""
 
         results = get_results(endpoint_url, query)
-        results_parse = data_json_mountains(results)
+        results_parse = data_json_mountains(results) ## llamamos a la funcion json
 
-
+        ## Modificamos el campo coordenada para obtener los puntos en orden y limpios
         for item in results_parse['mountains']:
             pointStr = item['coordenada'].replace('Point(', '').replace(')', '')
             x = pointStr.split(' ')
