@@ -33,7 +33,7 @@ Para obtener datos utilizamos **wikidata**, una base de datos abierto y gratuito
 
 Wikidata nos pone a nuestra disposicion una aplicacion denominada *Wikidata Query Service* para realizar consultas a la propia wikidata de una forma limpia y con un asistente de consultas.
 
-![Query Service](./static/img/QUERY_SERVICE.jpeg)
+![Query Service](/static/img/QUERY_SERVICE.jpeg)
 
 ### Metológía y Resultado Final <a name="id3.1"></a>
 
