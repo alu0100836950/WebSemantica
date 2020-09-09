@@ -31,21 +31,23 @@ results = get_results(endpoint_url, query)
 
 patron = "Q.*"
 
-for result in results["results"]["bindings"]:
+# for result in results["results"]["bindings"]:
 
-    if not (re.search(patron,str(result['monta_aLabel']['value']) )):
-        print(result['coordenadas']['value'])
+#     if not (re.search(patron,str(result['monta_aLabel']['value']) )):
+#         print(result['coordenadas']['value'])
 
 
 Mountains_JSON = {}
 Mountains_JSON['mountains'] = []
 
 
-# for result in results["results"]["bindings"]:
-#     Mountains_JSON['mountains'].append({
-#         'name_mountain': result['monta_aLabel']['value'],
-#         'coordenada': result['coordenadas']['value']
-#     })
+for result in results["results"]["bindings"]:
+    if not (re.search(patron,str(result['monta_aLabel']['value']) )):
+        
+        Mountains_JSON['mountains'].append({
+            'name_mountain': result['monta_aLabel']['value'],
+            'coordenada': result['coordenadas']['value']
+        })
 
 
 # print("*******************************************************")
