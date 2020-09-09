@@ -194,6 +194,8 @@ En donde la variable **search** son los datos obtenidos de la consulta. UNa vez 
 
 Si se ha realizado una petición a wikidata y la seleccion escogida ha sido 'mountains' se crea una tabla. Usando jina recorremos las montañas con *search.mountains(la variable que le hemos pasado en el render_template) y creamos una fila para cada elemento del json con dos columnas, en una el nombre de la montaña *mountain.name_mountain* y otra con el enlace a Google Maps, en donde se añade a la url los puntos bien formateados para que el enlace sea el correcto.
 
+*Un detalle importante es que los valores de las coordenadas no suelen ser del todo correctos y existe un poco de desviación con la ubicación que se muestra pero eso es un fallo de los propios datos que estan en la wikidata*
+
 #### Resultado final <a name="id2.2.3"></a>
 
 Este sería el resultado de la aplicación web. 
@@ -202,7 +204,9 @@ Este sería el resultado de la aplicación web.
 
 ![Page Web](./static/gif/izaña.gif)
 
-Como vemos podemos elegir entre *playas y montañas* y se nos muestra en una tabla con los diferentes datos para cada selección y un enlace a Google Maps para visualizar la ubicación de la opción elegida.
+Como vemos podemos elegir entre *playas y montañas*, mostrando en una tabla los diferentes datos para cada selección y un enlace a Google Maps para visualizar la ubicación de la opción elegida.
+
+*En el ejemplo hemos escogido "Mountains" y hemos seleccionado la "Montaña de Izaña".*
 
 
 ## Conclusiones <a name="id3"></a>
